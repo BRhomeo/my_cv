@@ -17,7 +17,7 @@ class _AppDrawerState extends State<AppDrawer> {
   Widget build(BuildContext context) {
     return Container(
       width: isopen ? 150 : 60,
-      color: Color(0xff5C527F),
+      color: const Color(0xff5C527F),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -58,11 +58,13 @@ class _AppDrawerState extends State<AppDrawer> {
                     icon: Icon(
                       Icons.home,
                       size: 25,
-                      color: selected == 0 ? Colors.white : Color(0xff6E85B2),
+                      color: selected == 0
+                          ? Colors.white
+                          : const Color(0xff6E85B2),
                     ),
                     label: Text(
                       isopen ? 'Home' : '',
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                     onPressed: () {
                       setState(() {

@@ -14,7 +14,7 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff261C2C),
+      backgroundColor: const Color(0xff261C2C),
       body: Center(
         child: Wrap(
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -59,54 +59,51 @@ class _FirstPageState extends State<FirstPage> {
               width: 20.w,
             ),
             //! my inmg
-            Image.asset(
-              'assets\\me.png',
-              width: 180.w,
+            Container(
+              //   color: Colors.black,
+              child: Image.asset(
+                'assets\\me.png',
+                width: 200.w,
+              ),
             ),
-            SizedBox(
-              height: 35.h,
-              width: 25.w,
+            const SizedBox(
+              height: 35,
+              width: 25,
             ),
             //! Short text
-            Container(
-              color: Colors.black,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    color: Colors.pink,
-                    child: Text(
-                      'Hello, I\'m Ibrahim',
-                      style: GoogleFonts.ubuntu(
-                          color: Colors.white,
-                          fontSize: 35.sp,
-                          fontWeight: FontWeight.w500),
-                    ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Hello, I\'m Ibrahim',
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white,
+                      fontSize: 35.sp,
+                      fontWeight: FontWeight.w500),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 140),
+                  child: Text(
+                    'Flutter Developer',
+                    style: GoogleFonts.ubuntu(
+                        color: Colors.white, fontSize: 20.sp),
                   ),
-                  SizedBox(
-                    height: 3.h,
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Text(
+                    'High level experience in Flutter Development\n and knowledge , producing quality work.',
+                    style: GoogleFonts.ubuntu(
+                        color: Colors.white, fontSize: 15.sp),
                   ),
-                  Container(
-                    color: Colors.orange,
-                    child: Text(
-                      'Flutter Developer',
-                      style: GoogleFonts.ubuntu(
-                          color: Colors.white, fontSize: 20.sp),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Container(
-                    color: Colors.pink,
-                    child: Text(
-                      'High level experience in Flutter Development\n and knowledge , producing quality work.',
-                      style: GoogleFonts.ubuntu(
-                          color: Colors.white, fontSize: 15.sp),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
