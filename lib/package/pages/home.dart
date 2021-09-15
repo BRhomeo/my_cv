@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     return ScreenUtilInit(
       builder: () => GetMaterialApp(
         theme: ThemeData.light().copyWith(
-          textTheme: TextTheme(bodyText1: TextStyle(color: Colors.white)),
+          textTheme: const TextTheme(bodyText1: TextStyle(color: Colors.white)),
           scaffoldBackgroundColor: const Color(0xff261C2C),
           textButtonTheme: TextButtonThemeData(
             style: TextButton.styleFrom(
@@ -38,19 +38,20 @@ class _HomePageState extends State<HomePage> {
         home: Scaffold(
           backgroundColor: Colors.white,
           body: Row(
-            children: [
-              const AppDrawer(),
+            children: const [
+              AppDrawer(),
               Expanded(
-                child: PageView(
-                  pageSnapping: false,
-                  scrollDirection: Axis.vertical,
-                  controller: controller,
-                  children: const [
-                    FirstPage(),
-                    AboutMe(),
-                    Skills(),
-                  ],
-                ),
+                child: Skills(),
+                //  PageView(
+                //   pageSnapping: false,
+                //   scrollDirection: Axis.vertical,
+                //   controller: controller,
+                //   children: const [
+                //     FirstPage(),
+                //     AboutMe(),
+                //     Skills(),
+                //   ],
+                // ),
               ),
             ],
           ),

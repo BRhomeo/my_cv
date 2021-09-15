@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,10 +11,39 @@ class Skills extends StatefulWidget {
 }
 
 class _SkillsState extends State<Skills> {
-  List<String> headers = [
-    'platForms expirens with Flutter ',
-    'Flutter expirens',
-    'gineral programing skills'
+  List<Map<String, List<String>>> mySkillsMap = [
+    {
+      'platForms expirens with Flutter ': [
+        'android 80%',
+        'ios 40%',
+        'web 75%',
+        'windows 60%',
+        'mac 50%'
+      ],
+    },
+    {
+      'Flutter expirens': [
+        '3ed party library 90%',
+        'custmaize laibraes 70%',
+        'make clean and profictinal code 90%',
+        'make an Ui as espacted 90%',
+        'Them and localization 90%',
+        'resposve Ui 80%',
+        'state mangment packeages 70%'
+      ],
+    },
+    {
+      'gineral programing skills': [
+        'OOP 70%',
+        'data structure 50%',
+        'SQl database 65%',
+        '3ed party api 80%',
+        'firebase 80%',
+        'git & github 60%',
+        'Group warkcing 85%',
+        'Commit to the deadline 95%'
+      ]
+    }
   ];
   var isopen = false;
   @override
@@ -24,9 +51,7 @@ class _SkillsState extends State<Skills> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 25, top: 50),
-        child: Wrap(
-          alignment: WrapAlignment.center,
-          crossAxisAlignment: WrapCrossAlignment.center,
+        child: Column(
           children: [
             //! Column title
             Align(
@@ -53,22 +78,19 @@ class _SkillsState extends State<Skills> {
                 ),
               ),
             ),
-            ExpansionPanelList(
-              expansionCallback: (i, op) {
-                setState(() {
-                  isopen = !isopen;
-                });
-              },
-              children: [
-                ExpansionPanel(
-                  headerBuilder: (context, isopen) => const Text('hi'),
-                  body: const Text('data'),
-                  isExpanded: isopen,
-                  canTapOnHeader: true,
-                ),
-              ],
+
+            Expanded(
+              child: ListView.builder(
+                itemCount: mySkillsMap.length,
+                // mySkillsMap.length,
+                itemBuilder: (context, index) {
+                  return SkillsDropList(
+                      title: mySkillsMap[index].keys.first,
+                      skillsList: mySkillsMap[index].values.first);
+                  //mySkillsMap[index].keys.toString()
+                },
+              ),
             ),
-            const SkillsDropList(),
           ],
         ),
       ),
