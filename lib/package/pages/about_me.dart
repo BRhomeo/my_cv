@@ -14,7 +14,7 @@ class _AboutMeState extends State<AboutMe> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: 25, top: 30.w),
+        padding: EdgeInsets.only(left: 25, top: 30.h),
         child: Wrap(
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,

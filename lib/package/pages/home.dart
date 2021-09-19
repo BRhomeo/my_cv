@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:my_cv/package/Components/drawer.dart';
 import 'package:my_cv/package/pages/about_me.dart';
 import 'package:my_cv/package/pages/first_page.dart';
+import 'package:my_cv/package/pages/services_screan/services_screan.dart';
 import 'package:my_cv/package/pages/skills/skills.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +17,7 @@ class HomePage extends StatefulWidget {
 //TODO: USR FLOW WIDGET FO IMAGE
 class _HomePageState extends State<HomePage> {
   var controller = PageController(
-    initialPage: 0,
+    initialPage: 3,
   );
   @override
   Widget build(BuildContext context) {
@@ -25,8 +26,6 @@ class _HomePageState extends State<HomePage> {
         theme: ThemeData.light().copyWith(
           sliderTheme: SliderThemeData(
             activeTrackColor: const Color(0xff6E85B2),
-            activeTickMarkColor: Colors.green,
-            overlayColor: Colors.green,
             thumbShape: SliderComponentShape.noOverlay,
             overlayShape: SliderComponentShape.noOverlay,
           ),
@@ -43,7 +42,6 @@ class _HomePageState extends State<HomePage> {
           )),
         ),
         home: Scaffold(
-          backgroundColor: Colors.white,
           body: Row(
             children: [
               const AppDrawer(),
@@ -56,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                     FirstPage(),
                     AboutMe(),
                     Skills(),
+                    ServicesScrean(),
                   ],
                 ),
                 //Skills(),
