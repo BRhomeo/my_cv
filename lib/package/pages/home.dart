@@ -16,13 +16,20 @@ class HomePage extends StatefulWidget {
 //TODO: USR FLOW WIDGET FO IMAGE
 class _HomePageState extends State<HomePage> {
   var controller = PageController(
-    initialPage: 2,
+    initialPage: 0,
   );
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: () => GetMaterialApp(
         theme: ThemeData.light().copyWith(
+          sliderTheme: SliderThemeData(
+            activeTrackColor: const Color(0xff6E85B2),
+            activeTickMarkColor: Colors.green,
+            overlayColor: Colors.green,
+            thumbShape: SliderComponentShape.noOverlay,
+            overlayShape: SliderComponentShape.noOverlay,
+          ),
           textTheme: const TextTheme(bodyText1: TextStyle(color: Colors.white)),
           scaffoldBackgroundColor: const Color(0xff261C2C),
           textButtonTheme: TextButtonThemeData(
@@ -38,20 +45,20 @@ class _HomePageState extends State<HomePage> {
         home: Scaffold(
           backgroundColor: Colors.white,
           body: Row(
-            children: const [
-              AppDrawer(),
+            children: [
+              const AppDrawer(),
               Expanded(
-                child: Skills(),
-                //  PageView(
-                //   pageSnapping: false,
-                //   scrollDirection: Axis.vertical,
-                //   controller: controller,
-                //   children: const [
-                //     FirstPage(),
-                //     AboutMe(),
-                //     Skills(),
-                //   ],
-                // ),
+                child: PageView(
+                  pageSnapping: false,
+                  scrollDirection: Axis.vertical,
+                  controller: controller,
+                  children: const [
+                    FirstPage(),
+                    AboutMe(),
+                    Skills(),
+                  ],
+                ),
+                //Skills(),
               ),
             ],
           ),

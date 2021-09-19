@@ -16,7 +16,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: isopen ? 150 : 60,
+      width: isopen ? 100.w : 60,
       color: const Color(0xff5C527F),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +67,7 @@ class _AppDrawerState extends State<AppDrawer> {
                       ),
                       label: Text(
                         isopen ? 'Home' : '',
-                        style: const TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 15.sp),
                       ),
                       onPressed: () {
                         setState(() {
@@ -88,8 +88,8 @@ class _AppDrawerState extends State<AppDrawer> {
                             : const Color(0xff6E85B2),
                       ),
                       label: Text(
-                        isopen ? 'Home' : '',
-                        style: const TextStyle(fontSize: 20),
+                        isopen ? 'About Me' : '',
+                        style: TextStyle(fontSize: 15.sp),
                       ),
                       onPressed: () {
                         setState(() {
@@ -111,7 +111,10 @@ class _AppDrawerState extends State<AppDrawer> {
                         size: 25,
                         color: selected == 2 ? Colors.white : Colors.black,
                       ),
-                      label: Text(isopen ? 'Skills' : ''),
+                      label: Text(
+                        isopen ? 'Skills' : '',
+                        style: TextStyle(fontSize: 15.sp),
+                      ),
                       onPressed: () {
                         setState(() {
                           selected = 2;
@@ -132,7 +135,10 @@ class _AppDrawerState extends State<AppDrawer> {
                         size: 25,
                         color: selected == 3 ? Colors.white : Colors.black,
                       ),
-                      label: Text(isopen ? 'Services' : ''),
+                      label: Text(
+                        isopen ? 'Services' : '',
+                        style: TextStyle(fontSize: 13.sp),
+                      ),
                       onPressed: () {
                         setState(() {
                           selected = 3;
@@ -153,7 +159,10 @@ class _AppDrawerState extends State<AppDrawer> {
                         size: 25,
                         color: selected == 4 ? Colors.white : Colors.black,
                       ),
-                      label: Text(isopen ? 'Portfolio' : ''),
+                      label: Text(
+                        isopen ? 'Portfolio' : '',
+                        style: TextStyle(fontSize: 13.sp),
+                      ),
                       onPressed: () {
                         setState(() {
                           selected = 4;
@@ -174,7 +183,10 @@ class _AppDrawerState extends State<AppDrawer> {
                         size: 25,
                         color: selected == 5 ? Colors.white : Colors.black,
                       ),
-                      label: Text(isopen ? 'ContactMe' : ''),
+                      label: Text(
+                        isopen ? 'ContactMe' : '',
+                        style: TextStyle(fontSize: 15.sp),
+                      ),
                       onPressed: () {
                         setState(() {
                           selected = 5;
@@ -198,20 +210,15 @@ class _AppDrawerState extends State<AppDrawer> {
                     Icons.arrow_upward,
                     size: 25,
                   ),
-                  label: Text(isopen ? 'Go up' : ''),
+                  label: Text(
+                    isopen ? 'Go up' : '',
+                    style: TextStyle(fontSize: 15.sp),
+                  ),
                   onPressed: () {},
                 ),
               ),
               const SizedBox(
                 height: 10,
-              ),
-              TextButton.icon(
-                icon: const Icon(
-                  Icons.wb_sunny,
-                  size: 25,
-                ),
-                label: Text(isopen ? 'Change Theme' : ''),
-                onPressed: () {},
               ),
             ],
           ),

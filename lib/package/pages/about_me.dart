@@ -14,7 +14,7 @@ class _AboutMeState extends State<AboutMe> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 25, top: 50),
+        padding: EdgeInsets.only(left: 25, top: 30.w),
         child: Wrap(
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,
@@ -23,7 +23,7 @@ class _AboutMeState extends State<AboutMe> {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 50.h),
+                padding: EdgeInsets.only(bottom: 40.h),
                 child: Column(
                   children: [
                     Text(
@@ -69,7 +69,7 @@ class _AboutMeState extends State<AboutMe> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
-                    'Flutter Developer , with extensive Knowledge \n and good ecperience , Cross Plat Forms \n technologies Frontend & backend,\ndelevering quality work.',
+                    'Flutter Developer, with extensive Knowledge \n and good ecperience , Cross Plat Forms \n technologies Frontend & backend,\ndelevering quality work.',
                     style: GoogleFonts.ubuntu(
                         color: Colors.white,
                         fontSize: 15.sp,
