@@ -16,7 +16,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: isopen ? 100.w : 60,
+      width: isopen ? 200 : 60,
       color: const Color(0xff5C527F),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,9 +149,9 @@ class _AppDrawerState extends State<AppDrawer> {
                   const SizedBox(
                     height: 10,
                   ),
-                  //Portfolio
+                  //previous projects
                   Tooltip(
-                    message: 'Portfolio',
+                    message: 'previous projects',
                     waitDuration: const Duration(milliseconds: 450),
                     child: TextButton.icon(
                       icon: Icon(
@@ -160,7 +160,7 @@ class _AppDrawerState extends State<AppDrawer> {
                         color: selected == 4 ? Colors.white : Colors.black,
                       ),
                       label: Text(
-                        isopen ? 'Portfolio' : '',
+                        isopen ? 'previous projects' : '',
                         style: TextStyle(fontSize: 13.sp),
                       ),
                       onPressed: () {

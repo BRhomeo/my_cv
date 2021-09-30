@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:my_cv/package/Components/drawer.dart';
 import 'package:my_cv/package/pages/about_me.dart';
+import 'package:my_cv/package/pages/contact_screan/contact_screan.dart';
 import 'package:my_cv/package/pages/first_page.dart';
+import 'package:my_cv/package/pages/previous_projects.dart';
 import 'package:my_cv/package/pages/services_screan/services_screan.dart';
 import 'package:my_cv/package/pages/skills/skills.dart';
 
@@ -17,7 +19,7 @@ class HomePage extends StatefulWidget {
 //TODO: USR FLOW WIDGET FO IMAGE
 class _HomePageState extends State<HomePage> {
   var controller = PageController(
-    initialPage: 3,
+    initialPage: 5,
   );
   @override
   Widget build(BuildContext context) {
@@ -55,6 +57,8 @@ class _HomePageState extends State<HomePage> {
                     AboutMe(),
                     Skills(),
                     ServicesScrean(),
+                    PreviousProjects(),
+                    ContactMeScrean(),
                   ],
                 ),
                 //Skills(),
